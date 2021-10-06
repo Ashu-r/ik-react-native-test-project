@@ -1,10 +1,9 @@
 import React from 'react';
-import {Button, View} from 'react-native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from './components/HomeScreen.js';
-import AboutScreen from './components/AboutScreen.js';
+import HomeScreen from './components/HomeScreen';
+import AboutScreen from './components/AboutScreen';
+import Data from './components/Data';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,6 +13,7 @@ const App = () => {
       <Tab.Navigator initialRouteName="Home">
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="About" component={AboutScreen} />
+        <Tab.Screen name="Data" component={Data} />
       </Tab.Navigator>
     </NavigationContainer>
   );

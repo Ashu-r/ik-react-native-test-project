@@ -88,7 +88,7 @@ const HomeScreen = ({navigation}) => {
       colorsArray[i] === false ? {cues: {audio: true, video: true}} : null;
     setSelected({
       ...selected,
-      [`${colors[i]}-number`]: cuesValue,
+      [`${colors[i]}-color`]: cuesValue,
     });
     setColorsArray(colorsArray.map((c, index) => (index === i ? !c : c)));
   };
@@ -131,6 +131,7 @@ const HomeScreen = ({navigation}) => {
         data[key] = selected[key];
       }
     }
+    navigation.navigate('Data', {data});
     console.log(data);
   };
 
